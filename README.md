@@ -26,6 +26,29 @@
 12. [License](#license)
 
 ---
+┌──────────────────┐    ┌───────────────────┐    ┌─────────────────┐
+│ User Query Input │───▶│ Memory Agent      │───▶│ RAG Agent       │
+└──────────────────┘    │ • fetch_short_term│    │ • text+image    │
+                        │ • fetch_long_term │    │   retrievers    │
+                        └───────────────────┘    └─┬───────────────┘
+                                                      │
+                                                      ▼
+                                             ┌─────────────────┐
+                                             │  LLM Chain      │
+                                             │  (Gemini, etc.) │
+                                             └─────────────────┘
+                                                      │
+                                         ┌────────────┴────────────┐
+                                         │ Memory Agent (update)   │
+                                         │ • store turn embeddings │
+                                         │ • upsert user facts     │
+                                         └─────────────────────────┘
+                                                      │
+                                                      ▼
+                                                ┌──────────┐
+                                                │  Response │
+                                                └──────────┘
+
 
 ## Features
 
