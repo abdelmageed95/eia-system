@@ -26,6 +26,7 @@
 12. [License](#license)
 
 ---
+```
 ┌──────────────────┐    ┌───────────────────┐    ┌─────────────────┐
 │ User Query Input │───▶│ Memory Agent      │───▶│ RAG Agent       │
 └──────────────────┘    │ • fetch_short_term│    │ • text+image    │
@@ -49,7 +50,7 @@
                                                 │  Response │
                                                 └──────────┘
 
-
+```
 ## Features
 
 * **Multi-Agent Coordination:** Router, Tool, Memory, Summarizer, Insight, and Report agents.
